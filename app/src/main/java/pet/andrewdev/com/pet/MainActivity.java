@@ -1,9 +1,11 @@
 package pet.andrewdev.com.pet;
 
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
@@ -14,6 +16,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -43,6 +46,15 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         add = (FloatingActionButton) findViewById(R.id.btn_add);
         mAdapter = new PetCursorAdapter(this, null);
         listPets.setAdapter(mAdapter);
+        listPets.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent editorIntent = new Intent(MainActivity.this, EditorActivity.class);
+                Uri uri = ContentUris.withAppendedId(PetContract.CONTENT_URI, id);
+                editorIntent.setData(uri);
+                startActivity(editorIntent);
+            }
+        });
         //Kick off the loader
         getSupportLoaderManager().initLoader(PET_LOADER, null, this);
     }

@@ -17,4 +17,14 @@
     <string name="pet_saved">Pet saved</string>
     <string name="empty_shelter">It\'s little bit lonely here...</string>
     <string name="empty_shelter_sub">Get started by adding a pet</string>
+    <string name="edit_pet">Edit Pet</string>
+    <string name="add_pet">Add Pet</string>
+    <string name="unsaved_changes_dialog">Discard your changes and quirt editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep editing</string>
+    <string name="delete_dialog">Are you sure to delete this data?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delete_success">Delete data success</string>
+    <string name="delete_failed">Delete data failed</string>
 </resources>
