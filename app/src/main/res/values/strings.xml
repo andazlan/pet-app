@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Pet</string>
+    <string name="insert_dummy_data">Insert dummy data</string>
+    <string name="delete_dummy_data">Delete dummy data</string>
+    <string name="insert_data">Insert data</string>
+    <string name="overview">Overview</string>
+    <string name="name">Name</string>
+    <string name="breed">Breed</string>
+    <string name="gender">Gender</string>
+    <string name="measurement">Measurement</string>
+    <string name="weight">Weight</string>
+    <string name="unknown">Unknown</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="error_saving">Error with saving pet</string>
+    <string name="saved_with_id">Pet saved with row id :</string>
+    <string name="pet_saved">Pet saved</string>
+    <string name="empty_shelter">It\'s little bit lonely here...</string>
+    <string name="empty_shelter_sub">Get started by adding a pet</string>
+</resources>
